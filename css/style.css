@@ -1,0 +1,144 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+:root {
+    /* primary color */
+    --Violet: hsl(257, 40%, 49%);
+    --Soft-Magenta: hsl(300, 69%, 71%);
+    --text-white: #fff;
+}
+
+img {
+    max-inline-size: 100%;
+    block-size: auto; 
+}
+
+.fa-brands {
+    color: var(--text-white);
+    border-radius: 50%;
+    padding: 1.25rem 0.625rem;
+    border: 1px solid var(--text-white);
+}
+
+.fa-brands:hover {
+    color: var(--Soft-Magenta);
+    border: 1px solid var(--Soft-Magenta);
+}
+
+body {
+    background-color: var(--Violet);
+    color: var(--text-white);
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
+    background-image: url(../images/bg-mobile.svg);
+    background-repeat: no-repeat;
+    background-position: top left;
+    background-size: 100%;
+}
+
+#logo {
+    max-width: 1550px;
+    margin: 0 auto;
+    padding: 2rem 1.25rem 0 1.25rem;
+}
+
+#logo img {
+    max-width: 150px;
+}
+
+@media (min-width: 767px) {
+    #logo img {
+        max-width: 200px;
+    }
+}
+
+#main {
+    /*dimension*/
+    max-width: 1550px;
+    margin: 50px auto 0 auto;
+    padding: 0 1.25rem 0 1.25rem;
+
+    /* layout */
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+}
+
+#main aside img {
+    margin-bottom: 100px;
+}
+
+#main header {
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+}
+
+#main header h1 {
+    max-width: 360px;
+    text-align: center;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+}
+
+#main header p {
+    max-width: 300px;
+    margin: 10px 0 40px 0;
+    text-align: center;
+    line-height: 30px;
+}
+
+#main header button {
+    padding: 10px 80px;
+    border: none;
+    border-radius: 50px;
+    margin: 0 auto;
+    /* font */
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+    color: var(--Violet);
+    font-weight: 400;
+}
+
+#main header button:hover {
+    background-color: var(--Soft-Magenta);
+    color: var(--text-white);
+}
+
+#social-links {
+    margin: 90px auto;
+    /* layout */
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    column-gap: 15px;
+}
+
+@media (min-width: 1024px) {
+    body {
+        background-image: url(../images/bg-desktop.svg);
+        background-size: cover;
+        overflow: hidden;
+    }
+
+    #main {
+        flex-flow: row nowrap;
+    }
+    
+    #main header p {
+        max-width: 500px;
+    }
+
+    #social-links {
+        max-width: 900px;
+        justify-content: flex-end;
+    }
+}
